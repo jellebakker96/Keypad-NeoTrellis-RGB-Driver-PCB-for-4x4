@@ -1,0 +1,21 @@
+infi.systray		version unkown		Python 3	# make system tray icon 	https://pypi.org/project/infi.systray/
+												https://github.com/Infinidat/infi.systray
+
+pynput			version 1.4.2		Python 3	# control keyboard		https://pypi.org/project/pynput/
+												https://pynput.readthedocs.io/en/latest/keyboard.html#pynput.keyboard.Key
+
+pyserial 		version 3.4		Python 3	# cominucate with arduino	https://pypi.org/project/pyserial/
+												https://github.com/pyserial/
+												https://pythonhosted.org/pyserial/
+
+Adafruit seesaw library	version 1.2.0		C/C++		# used by the arduino to	https://learn.adafruit.com/adafruit-neotrellis/arduino-code
+							 	  control the keypad		
+
+
+
+
+
+
+
+
+

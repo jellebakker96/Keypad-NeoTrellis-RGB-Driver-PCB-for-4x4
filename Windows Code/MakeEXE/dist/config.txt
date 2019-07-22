@@ -1,0 +1,121 @@
+[knop_0]
+#Kies of je met de knop een programma wilt openen (programma_knop = True) of een functie wilt uitvoeren zoals "windows key" of "escape" (programma_knop = False). 
+programma_knop 	= True
+
+#Hier moet je het programma pad geven als je deze knop gebruikt om een programma te openen.								
+progamma_pad 	= C:\Program Files\Mozilla Firefox\firefox.exe
+
+#Open of sluit je gekozen programma, als "open_progamma = False" dan zal de knop je programma sluiten. 
+open_progamma 	= True
+
+#Hier moet je de functie opgeven die je wilt uitvoeren, een lijst met opties kun je in de documentatie en onder aan dit bestand finden.								
+knop_functie 	=
+
+#Hier moet een nummer tussen 0 en 255 die de kleur van de knop bepaald. De kleur map is gegeven in de documentatie.								
+kleur 		= 255
+
+
+[knop_1]
+programma_knop 	= True
+progamma_pad 	= C:\Program Files\Mozilla Firefox\firefox.exe
+open_progamma 	= False
+knop_functie 	=
+kleur		= 75
+
+[knop_2]
+programma_knop 	= True
+progamma_pad 	= C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+open_progamma 	= True
+knop_functie 	=
+kleur		= 255
+
+[knop_3]
+programma_knop 	= True
+progamma_pad 	= C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+open_progamma 	= False
+knop_functie 	=
+kleur		= 75
+
+[knop_4]
+programma_knop 	= True
+progamma_pad 	= C:\WINDOWS\system32\notepad.exe
+open_progamma 	= True
+knop_functie 	=
+kleur		= 255
+
+[knop_5]
+programma_knop 	= True
+progamma_pad 	= C:\WINDOWS\system32\notepad.exe
+open_progamma 	= False
+knop_functie 	=
+kleur		= 75
+
+[knop_6]
+programma_knop 	= True
+progamma_pad 	= C:\Program Files\Microsoft Office\Office15\POWERPNT.EXE
+open_progamma 	= True
+knop_functie 	=
+kleur		= 255
+
+[knop_7]
+programma_knop 	= True
+progamma_pad 	= C:\Program Files\Microsoft Office\Office15\POWERPNT.EXE
+open_progamma 	= False
+knop_functie 	=
+kleur		= 75
+
+[knop_8]
+programma_knop 	= False
+progamma_pad 	=        
+open_progamma 	= True
+knop_functie 	= cmd 
+kleur		= 180
+
+[knop_9]
+programma_knop 	= False
+progamma_pad 	=
+open_progamma 	= True
+knop_functie 	= esc
+kleur		= 210
+
+[knop_10]
+programma_knop 	= False
+progamma_pad 	=
+open_progamma 	= True
+knop_functie 	= backspace
+kleur		= 150
+
+[knop_11]
+programma_knop 	= False
+progamma_pad 	=
+open_progamma 	= True
+knop_functie 	= delete
+kleur		= 130
+
+[knop_12]
+programma_knop 	= False
+progamma_pad 	=
+open_progamma 	= True
+knop_functie 	= pause
+kleur		= 110
+
+[knop_13]
+programma_knop 	= False
+progamma_pad 	=
+open_progamma 	= True
+knop_functie 	= print_screen
+kleur		= 90
+
+[knop_14]
+programma_knop 	= False
+progamma_pad 	=
+open_progamma 	= True
+knop_functie 	= caps_lock
+kleur		= 50
+
+[knop_15]
+programma_knop 	= False
+progamma_pad 	= 
+open_progamma 	= True
+knop_functie 	= enter
+kleur		= 30

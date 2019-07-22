@@ -1,0 +1,2 @@
+Pyinstaller  		version 3.5 		# make .exe		https://www.pyinstaller.org/
+Inno Setup		version 6.0		# make installer	http://www.jrsoftware.org/isinfo.php

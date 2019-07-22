@@ -1,0 +1,2 @@
+Deze text file is gemaakt door het programma "Keypad". Dit programma kan waarschijnlijk worden gevonden in de folder "C:\Program Files\Keypad"
+

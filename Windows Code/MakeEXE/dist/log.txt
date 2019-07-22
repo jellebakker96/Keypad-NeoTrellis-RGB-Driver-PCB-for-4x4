@@ -1,0 +1,12 @@
+Deze text file is gemaakt door het programma "Keypad". Dit programma kan waarschijnlijk worden gevonden in de folder "C:\Program Files\Keypad"
+
+Het lijkt er op dat je dit progamma for de tweede keer probeerd te starten,
+ Dit wordt niet ondersteunt.
+ Het kan ook zijn dat er een ander programa is dat verbinding maakt met de aruino.
+
+Het programma wordt afgesloten.
+Je kunt 4 dingen doen.
+1) Installeer het programma opnieuw om een nieuwe config file te maken.
+2) Verbind de 9 toetsen eerst voordat je het programma start
+3) Zorg er voor dat maar 1 toetsenbord (die 9 knopen) is verbonden.
+4) Check of het toetsenbord kapot is door een ander toetsenbord te gebruiken
