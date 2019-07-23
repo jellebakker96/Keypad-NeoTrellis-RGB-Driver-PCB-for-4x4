@@ -1,6 +1,7 @@
 # File names
 Filename_Logger = 'log.txt'
 Filename_Config = 'config.txt'
+Filename_Manual = 'manual.pdf'
 
 # Config file
 config_items_check = ['programma_knop', 'progamma_pad', 'open_progamma', 'knop_functie', 'kleur']
