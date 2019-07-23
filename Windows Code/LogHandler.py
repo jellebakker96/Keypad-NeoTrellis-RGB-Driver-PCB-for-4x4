@@ -7,7 +7,7 @@ class Logger:
         self.filename = filename          # give filename
         self.temp = os.path.isfile(self.filename)   # check if there is already a log file
         self.first_message = 'Deze text file is gemaakt door het programma "Keypad". Dit programma kan waarschijnlijk ' \
-                             'worden gevonden in de folder "C:\\Program Files\\Keypad"'
+                             'worden gevonden in de folder "C:\\Program Files (x86)\\Keypad"'
         if self.temp:
             with open(self.filename, 'w') as f:     # overwrite previous content
                 f.write(self.first_message+'\n\n')

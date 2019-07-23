@@ -39,8 +39,8 @@ def debugging_off(systrayicon):
 def show_log(systrayicon):
     open_file(Filename_Logger)
 
-def show_log(systrayicon):
-    open_file(Filename_Manual)
+def show_documentation(systrayicon):
+    open_file(Filename_documentation)
 
 def show_config_file(systrayicon):
     open_file(Filename_Config)
@@ -53,8 +53,8 @@ def close_program(systrayicon):
 
 def setup_system_tray():
     hover_text = "Keypad"
-    menu_options = (('Show log', 'log.ico', show_log),
-                    ('Show manual', 'log.ico', show_manual),
+    menu_options = (('Log', 'log.ico', show_log),
+                    ('Documentatie', 'documentation.ico', show_documentation),
                     ('Settings', 'settings.ico', show_config_file),
                     ('debugging', "debugging.ico", (('debugging on', "debugging_on.ico", debugging_on),
                                                     ('debugging off', "debugging_off.ico", debugging_off)))
