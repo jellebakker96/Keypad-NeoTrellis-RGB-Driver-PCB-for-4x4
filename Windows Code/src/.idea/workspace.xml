@@ -321,12 +321,16 @@
         <entry key="MAIN">
           <value>
             <State>
+<<<<<<< HEAD
+              <option name="COLUMN_ORDER" />
+=======
               <option name="RECENTLY_FILTERED_USER_GROUPS">
                 <collection />
               </option>
               <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
                 <collection />
               </option>
+>>>>>>> b27837473887fe87917498997b4f16453bce172b
             </State>
           </value>
         </entry>
