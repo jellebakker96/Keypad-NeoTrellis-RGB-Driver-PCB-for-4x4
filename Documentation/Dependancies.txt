@@ -8,6 +8,10 @@ pyserial 		version 3.4		Python 3	# cominucate with arduino	https://pypi.org/proj
 												https://github.com/pyserial/
 												https://pythonhosted.org/pyserial/
 
+psutil  		version 5.6.3		python 3	# opening/closing programs	https://pypi.org/project/psutil/
+												https://github.com/giampaolo/psutil
+												https://psutil.readthedocs.io/en/latest/
+
 Adafruit seesaw library	version 1.2.0		C/C++		# used by the arduino to	https://learn.adafruit.com/adafruit-neotrellis/arduino-code
 							 	  control the keypad		
 

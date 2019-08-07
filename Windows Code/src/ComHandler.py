@@ -42,6 +42,7 @@ class ArduinoCommunication:
         self.port.clear()
         self.port_found = False
         ports = list(serial.tools.list_ports.comports())
+        print(ports)
         for p in ports:
             if "Arduino" in p[1]:
                 self.port.append(p[0])
@@ -166,6 +167,7 @@ def main():
             d.update_settings()  # the config file is correct so update the settings
             counter = 0
         message = a.read_arduino()
+        print('test 1')
         if message:
             for i in message:
                 print(i)

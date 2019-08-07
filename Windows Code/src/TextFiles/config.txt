@@ -52,14 +52,14 @@ kleur		= 75
 
 [knop_6]
 programma_knop 	= True
-progamma_pad 	= C:\Program Files\Microsoft Office\Office15\POWERPNT.EXE
+progamma_pad 	= C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
 open_progamma 	= True
 knop_functie 	=
 kleur		= 255
 
 [knop_7]
 programma_knop 	= True
-progamma_pad 	= C:\Program Files\Microsoft Office\Office15\POWERPNT.EXE
+progamma_pad 	= C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
 open_progamma 	= False
 knop_functie 	=
 kleur		= 75
