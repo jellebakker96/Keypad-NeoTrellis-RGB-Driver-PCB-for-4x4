@@ -1,138 +1,462 @@
 Deze text file is gemaakt door het programma "Keypad". Dit programma kan waarschijnlijk worden gevonden in de folder "C:\Program Files (x86)\Keypad"
 
-[2019-08-07 15:46:51] This is port number 0
-	 device = COM7
+[2019-08-07 16:17:42] This is port number 0
+	 device = COM1
 	 name = None
-	 description = Arduino Leonardo (COM7)
-	 hwid = USB VID:PID=2341:8036 SER=6 LOCATION=1-2:x.0
-	 vid = 9025
-	 pid = 32822
-	 serial_number = 6
-	 location = 1-2:x.0
-	 manufacturer = Arduino LLC (www.arduino.cc)
+	 description = Communications Port (COM1)
+	 hwid = ACPI\PNP0501\0
+	 vid = None
+	 pid = None
+	 serial_number = None
+	 location = None
+	 manufacturer = (Standaardpoorttypen)
 	 product = None
 	 interface = None
 
-[2019-08-07 15:46:51] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+[2019-08-07 16:17:46] This is port number 0
+	 device = COM1
+	 name = None
+	 description = Communications Port (COM1)
+	 hwid = ACPI\PNP0501\0
+	 vid = None
+	 pid = None
+	 serial_number = None
+	 location = None
+	 manufacturer = (Standaardpoorttypen)
+	 product = None
+	 interface = None
+
+[2019-08-07 16:17:50] This is port number 0
+	 device = COM1
+	 name = None
+	 description = Communications Port (COM1)
+	 hwid = ACPI\PNP0501\0
+	 vid = None
+	 pid = None
+	 serial_number = None
+	 location = None
+	 manufacturer = (Standaardpoorttypen)
+	 product = None
+	 interface = None
+
+[2019-08-07 16:17:54] This is port number 0
+	 device = COM1
+	 name = None
+	 description = Communications Port (COM1)
+	 hwid = ACPI\PNP0501\0
+	 vid = None
+	 pid = None
+	 serial_number = None
+	 location = None
+	 manufacturer = (Standaardpoorttypen)
+	 product = None
+	 interface = None
+
+[2019-08-07 16:17:54] This is port number 1
+	 device = COM7
+	 name = None
+	 description = USB Serial Device (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=8
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 8
+	 location = None
+	 manufacturer = Microsoft
+	 product = None
+	 interface = None
+
+[2019-08-07 16:17:54] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
 De volgende porten zijn gevonden ['COM7']
-[2019-08-07 15:46:51] connected to COM7
-[2019-08-07 15:46:54] This is port number 0
-	 device = COM7
+[2019-08-07 16:17:54] connected to COM7
+[2019-08-07 16:18:02] This is port number 0
+	 device = COM1
 	 name = None
-	 description = Arduino Leonardo (COM7)
-	 hwid = USB VID:PID=2341:8036 SER=6 LOCATION=1-2:x.0
-	 vid = 9025
-	 pid = 32822
-	 serial_number = 6
-	 location = 1-2:x.0
-	 manufacturer = Arduino LLC (www.arduino.cc)
+	 description = Communications Port (COM1)
+	 hwid = ACPI\PNP0501\0
+	 vid = None
+	 pid = None
+	 serial_number = None
+	 location = None
+	 manufacturer = (Standaardpoorttypen)
 	 product = None
 	 interface = None
 
-[2019-08-07 15:46:54] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+[2019-08-07 16:18:06] This is port number 0
+	 device = COM1
+	 name = None
+	 description = Communications Port (COM1)
+	 hwid = ACPI\PNP0501\0
+	 vid = None
+	 pid = None
+	 serial_number = None
+	 location = None
+	 manufacturer = (Standaardpoorttypen)
+	 product = None
+	 interface = None
+
+[2019-08-07 16:18:06] This is port number 1
+	 device = COM7
+	 name = None
+	 description = USB Serial Device (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=8
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 8
+	 location = None
+	 manufacturer = Microsoft
+	 product = None
+	 interface = None
+
+[2019-08-07 16:18:06] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
 De volgende porten zijn gevonden ['COM7']
-[2019-08-07 15:47:00] This is port number 0
-	 device = COM7
+[2019-08-07 16:18:06] connected to COM7
+[2019-08-07 16:18:14] This is port number 0
+	 device = COM1
 	 name = None
-	 description = Arduino Leonardo (COM7)
-	 hwid = USB VID:PID=2341:8036 SER=6 LOCATION=1-2:x.0
-	 vid = 9025
-	 pid = 32822
-	 serial_number = 6
-	 location = 1-2:x.0
-	 manufacturer = Arduino LLC (www.arduino.cc)
+	 description = Communications Port (COM1)
+	 hwid = ACPI\PNP0501\0
+	 vid = None
+	 pid = None
+	 serial_number = None
+	 location = None
+	 manufacturer = (Standaardpoorttypen)
 	 product = None
 	 interface = None
 
-[2019-08-07 15:47:00] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+[2019-08-07 16:18:14] This is port number 1
+	 device = COM7
+	 name = None
+	 description = USB Serial Device (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=8
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 8
+	 location = None
+	 manufacturer = Microsoft
+	 product = None
+	 interface = None
+
+[2019-08-07 16:18:14] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
 De volgende porten zijn gevonden ['COM7']
-[2019-08-07 15:47:06] This is port number 0
-	 device = COM7
+[2019-08-07 16:18:20] This is port number 0
+	 device = COM1
 	 name = None
-	 description = Arduino Leonardo (COM7)
-	 hwid = USB VID:PID=2341:8036 SER=6 LOCATION=1-2:x.0
-	 vid = 9025
-	 pid = 32822
-	 serial_number = 6
-	 location = 1-2:x.0
-	 manufacturer = Arduino LLC (www.arduino.cc)
+	 description = Communications Port (COM1)
+	 hwid = ACPI\PNP0501\0
+	 vid = None
+	 pid = None
+	 serial_number = None
+	 location = None
+	 manufacturer = (Standaardpoorttypen)
 	 product = None
 	 interface = None
 
-[2019-08-07 15:47:06] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+[2019-08-07 16:18:20] This is port number 1
+	 device = COM7
+	 name = None
+	 description = USB Serial Device (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=8
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 8
+	 location = None
+	 manufacturer = Microsoft
+	 product = None
+	 interface = None
+
+[2019-08-07 16:18:20] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
 De volgende porten zijn gevonden ['COM7']
-[2019-08-07 15:47:12] This is port number 0
-	 device = COM7
+[2019-08-07 16:18:26] This is port number 0
+	 device = COM1
 	 name = None
-	 description = Arduino Leonardo (COM7)
-	 hwid = USB VID:PID=2341:8036 SER=6 LOCATION=1-2:x.0
-	 vid = 9025
-	 pid = 32822
-	 serial_number = 6
-	 location = 1-2:x.0
-	 manufacturer = Arduino LLC (www.arduino.cc)
+	 description = Communications Port (COM1)
+	 hwid = ACPI\PNP0501\0
+	 vid = None
+	 pid = None
+	 serial_number = None
+	 location = None
+	 manufacturer = (Standaardpoorttypen)
 	 product = None
 	 interface = None
 
-[2019-08-07 15:47:12] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+[2019-08-07 16:18:26] This is port number 1
+	 device = COM7
+	 name = None
+	 description = USB Serial Device (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=8
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 8
+	 location = None
+	 manufacturer = Microsoft
+	 product = None
+	 interface = None
+
+[2019-08-07 16:18:26] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
 De volgende porten zijn gevonden ['COM7']
-[2019-08-07 15:47:18] This is port number 0
-	 device = COM7
+[2019-08-07 16:18:32] This is port number 0
+	 device = COM1
 	 name = None
-	 description = Arduino Leonardo (COM7)
-	 hwid = USB VID:PID=2341:8036 SER=6 LOCATION=1-2:x.0
-	 vid = 9025
-	 pid = 32822
-	 serial_number = 6
-	 location = 1-2:x.0
-	 manufacturer = Arduino LLC (www.arduino.cc)
+	 description = Communications Port (COM1)
+	 hwid = ACPI\PNP0501\0
+	 vid = None
+	 pid = None
+	 serial_number = None
+	 location = None
+	 manufacturer = (Standaardpoorttypen)
 	 product = None
 	 interface = None
 
-[2019-08-07 15:47:18] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+[2019-08-07 16:18:32] This is port number 1
+	 device = COM7
+	 name = None
+	 description = USB Serial Device (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=8
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 8
+	 location = None
+	 manufacturer = Microsoft
+	 product = None
+	 interface = None
+
+[2019-08-07 16:18:32] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
 De volgende porten zijn gevonden ['COM7']
-[2019-08-07 15:47:24] This is port number 0
-	 device = COM7
+[2019-08-07 16:18:38] This is port number 0
+	 device = COM1
 	 name = None
-	 description = Arduino Leonardo (COM7)
-	 hwid = USB VID:PID=2341:8036 SER=6 LOCATION=1-2:x.0
-	 vid = 9025
-	 pid = 32822
-	 serial_number = 6
-	 location = 1-2:x.0
-	 manufacturer = Arduino LLC (www.arduino.cc)
+	 description = Communications Port (COM1)
+	 hwid = ACPI\PNP0501\0
+	 vid = None
+	 pid = None
+	 serial_number = None
+	 location = None
+	 manufacturer = (Standaardpoorttypen)
 	 product = None
 	 interface = None
 
-[2019-08-07 15:47:24] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+[2019-08-07 16:18:38] This is port number 1
+	 device = COM7
+	 name = None
+	 description = USB Serial Device (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=8
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 8
+	 location = None
+	 manufacturer = Microsoft
+	 product = None
+	 interface = None
+
+[2019-08-07 16:18:38] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
 De volgende porten zijn gevonden ['COM7']
-[2019-08-07 15:47:30] This is port number 0
-	 device = COM7
+[2019-08-07 16:18:44] This is port number 0
+	 device = COM1
 	 name = None
-	 description = Arduino Leonardo (COM7)
-	 hwid = USB VID:PID=2341:8036 SER=6 LOCATION=1-2:x.0
-	 vid = 9025
-	 pid = 32822
-	 serial_number = 6
-	 location = 1-2:x.0
-	 manufacturer = Arduino LLC (www.arduino.cc)
+	 description = Communications Port (COM1)
+	 hwid = ACPI\PNP0501\0
+	 vid = None
+	 pid = None
+	 serial_number = None
+	 location = None
+	 manufacturer = (Standaardpoorttypen)
 	 product = None
 	 interface = None
 
-[2019-08-07 15:47:30] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+[2019-08-07 16:18:44] This is port number 1
+	 device = COM7
+	 name = None
+	 description = USB Serial Device (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=8
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 8
+	 location = None
+	 manufacturer = Microsoft
+	 product = None
+	 interface = None
+
+[2019-08-07 16:18:44] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
 De volgende porten zijn gevonden ['COM7']
-[2019-08-07 15:47:35] This is port number 0
-	 device = COM7
+[2019-08-07 16:18:49] This is port number 0
+	 device = COM1
 	 name = None
-	 description = Arduino Leonardo (COM7)
-	 hwid = USB VID:PID=2341:8036 SER=6 LOCATION=1-2:x.0
-	 vid = 9025
-	 pid = 32822
-	 serial_number = 6
-	 location = 1-2:x.0
-	 manufacturer = Arduino LLC (www.arduino.cc)
+	 description = Communications Port (COM1)
+	 hwid = ACPI\PNP0501\0
+	 vid = None
+	 pid = None
+	 serial_number = None
+	 location = None
+	 manufacturer = (Standaardpoorttypen)
 	 product = None
 	 interface = None
 
-[2019-08-07 15:47:35] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+[2019-08-07 16:18:49] This is port number 1
+	 device = COM7
+	 name = None
+	 description = USB Serial Device (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=8
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 8
+	 location = None
+	 manufacturer = Microsoft
+	 product = None
+	 interface = None
+
+[2019-08-07 16:18:49] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+De volgende porten zijn gevonden ['COM7']
+[2019-08-07 16:18:54] This is port number 0
+	 device = COM1
+	 name = None
+	 description = Communications Port (COM1)
+	 hwid = ACPI\PNP0501\0
+	 vid = None
+	 pid = None
+	 serial_number = None
+	 location = None
+	 manufacturer = (Standaardpoorttypen)
+	 product = None
+	 interface = None
+
+[2019-08-07 16:18:54] This is port number 1
+	 device = COM7
+	 name = None
+	 description = USB Serial Device (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=8
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 8
+	 location = None
+	 manufacturer = Microsoft
+	 product = None
+	 interface = None
+
+[2019-08-07 16:18:54] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+De volgende porten zijn gevonden ['COM7']
+[2019-08-07 16:18:58] This is port number 0
+	 device = COM1
+	 name = None
+	 description = Communications Port (COM1)
+	 hwid = ACPI\PNP0501\0
+	 vid = None
+	 pid = None
+	 serial_number = None
+	 location = None
+	 manufacturer = (Standaardpoorttypen)
+	 product = None
+	 interface = None
+
+[2019-08-07 16:18:58] This is port number 1
+	 device = COM7
+	 name = None
+	 description = USB Serial Device (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=8
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 8
+	 location = None
+	 manufacturer = Microsoft
+	 product = None
+	 interface = None
+
+[2019-08-07 16:18:58] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+De volgende porten zijn gevonden ['COM7']
+[2019-08-07 16:19:02] This is port number 0
+	 device = COM1
+	 name = None
+	 description = Communications Port (COM1)
+	 hwid = ACPI\PNP0501\0
+	 vid = None
+	 pid = None
+	 serial_number = None
+	 location = None
+	 manufacturer = (Standaardpoorttypen)
+	 product = None
+	 interface = None
+
+[2019-08-07 16:19:07] This is port number 0
+	 device = COM1
+	 name = None
+	 description = Communications Port (COM1)
+	 hwid = ACPI\PNP0501\0
+	 vid = None
+	 pid = None
+	 serial_number = None
+	 location = None
+	 manufacturer = (Standaardpoorttypen)
+	 product = None
+	 interface = None
+
+[2019-08-07 16:19:07] This is port number 1
+	 device = COM7
+	 name = None
+	 description = USB Serial Device (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=8
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 8
+	 location = None
+	 manufacturer = Microsoft
+	 product = None
+	 interface = None
+
+[2019-08-07 16:19:07] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+De volgende porten zijn gevonden ['COM7']
+[2019-08-07 16:19:07] connected to COM7
+[2019-08-07 16:19:14] This is port number 0
+	 device = COM1
+	 name = None
+	 description = Communications Port (COM1)
+	 hwid = ACPI\PNP0501\0
+	 vid = None
+	 pid = None
+	 serial_number = None
+	 location = None
+	 manufacturer = (Standaardpoorttypen)
+	 product = None
+	 interface = None
+
+[2019-08-07 16:19:14] This is port number 1
+	 device = COM7
+	 name = None
+	 description = USB Serial Device (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=8
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 8
+	 location = None
+	 manufacturer = Microsoft
+	 product = None
+	 interface = None
+
+[2019-08-07 16:19:14] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+De volgende porten zijn gevonden ['COM7']
+[2019-08-07 16:19:20] This is port number 0
+	 device = COM1
+	 name = None
+	 description = Communications Port (COM1)
+	 hwid = ACPI\PNP0501\0
+	 vid = None
+	 pid = None
+	 serial_number = None
+	 location = None
+	 manufacturer = (Standaardpoorttypen)
+	 product = None
+	 interface = None
+
+[2019-08-07 16:19:20] This is port number 1
+	 device = COM7
+	 name = None
+	 description = USB Serial Device (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=8
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 8
+	 location = None
+	 manufacturer = Microsoft
+	 product = None
+	 interface = None
+
+[2019-08-07 16:19:20] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
 De volgende porten zijn gevonden ['COM7']
