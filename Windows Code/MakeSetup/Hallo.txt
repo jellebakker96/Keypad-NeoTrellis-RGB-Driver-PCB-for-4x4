@@ -1,3 +1,0 @@
-Hallo,
-
-Leuk dat je het programma "Keypad" aan het installeren bent. De volledige documentatie kan worden gevonden in github: "https://github.com/jellebakker96/Keypad-V2".

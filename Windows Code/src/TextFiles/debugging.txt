@@ -1,0 +1,2 @@
+[debugging_knop]
+debugging = True
