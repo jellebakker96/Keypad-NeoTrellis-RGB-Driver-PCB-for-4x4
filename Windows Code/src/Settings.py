@@ -16,8 +16,8 @@ config_key_items_data = ['boolean', 'path', 'boolean', 'keypress string', 'int']
 
 # Config file debugging
 config_debugging_sections_check = ['debugging_knop']
-config_debugging_items_check = ['debugging']
-config_debugging_items_data = ['boolean']
+config_debugging_items_check = ['debugging', 'vid', 'pid']
+config_debugging_items_data = ['boolean', 'int', 'int']
 
 # Timing
 sleep_time = 0.25  # total time that the program sleeps in seconds
@@ -29,3 +29,5 @@ system_tray_closed = False
 # Arduino Communication
 baudrate = 115200
 wait_write = 0.0  # make sure the write buffer is empty (not really needed)
+arduino_vid = [2341] # serial devices with these vid/pid numbers will also be seen as a arduino
+arduino_pid = [8036] # serial devices with these vid/pid numbers will also be seen as a arduino

@@ -1,7 +1,138 @@
 Deze text file is gemaakt door het programma "Keypad". Dit programma kan waarschijnlijk worden gevonden in de folder "C:\Program Files (x86)\Keypad"
 
-[2019-08-07 15:01:47] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+[2019-08-07 15:46:51] This is port number 0
+	 device = COM7
+	 name = None
+	 description = Arduino Leonardo (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=6 LOCATION=1-2:x.0
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 6
+	 location = 1-2:x.0
+	 manufacturer = Arduino LLC (www.arduino.cc)
+	 product = None
+	 interface = None
+
+[2019-08-07 15:46:51] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
 De volgende porten zijn gevonden ['COM7']
-[2019-08-07 15:01:47] connected to COM7
-[2019-08-07 15:01:51] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+[2019-08-07 15:46:51] connected to COM7
+[2019-08-07 15:46:54] This is port number 0
+	 device = COM7
+	 name = None
+	 description = Arduino Leonardo (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=6 LOCATION=1-2:x.0
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 6
+	 location = 1-2:x.0
+	 manufacturer = Arduino LLC (www.arduino.cc)
+	 product = None
+	 interface = None
+
+[2019-08-07 15:46:54] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+De volgende porten zijn gevonden ['COM7']
+[2019-08-07 15:47:00] This is port number 0
+	 device = COM7
+	 name = None
+	 description = Arduino Leonardo (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=6 LOCATION=1-2:x.0
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 6
+	 location = 1-2:x.0
+	 manufacturer = Arduino LLC (www.arduino.cc)
+	 product = None
+	 interface = None
+
+[2019-08-07 15:47:00] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+De volgende porten zijn gevonden ['COM7']
+[2019-08-07 15:47:06] This is port number 0
+	 device = COM7
+	 name = None
+	 description = Arduino Leonardo (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=6 LOCATION=1-2:x.0
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 6
+	 location = 1-2:x.0
+	 manufacturer = Arduino LLC (www.arduino.cc)
+	 product = None
+	 interface = None
+
+[2019-08-07 15:47:06] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+De volgende porten zijn gevonden ['COM7']
+[2019-08-07 15:47:12] This is port number 0
+	 device = COM7
+	 name = None
+	 description = Arduino Leonardo (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=6 LOCATION=1-2:x.0
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 6
+	 location = 1-2:x.0
+	 manufacturer = Arduino LLC (www.arduino.cc)
+	 product = None
+	 interface = None
+
+[2019-08-07 15:47:12] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+De volgende porten zijn gevonden ['COM7']
+[2019-08-07 15:47:18] This is port number 0
+	 device = COM7
+	 name = None
+	 description = Arduino Leonardo (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=6 LOCATION=1-2:x.0
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 6
+	 location = 1-2:x.0
+	 manufacturer = Arduino LLC (www.arduino.cc)
+	 product = None
+	 interface = None
+
+[2019-08-07 15:47:18] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+De volgende porten zijn gevonden ['COM7']
+[2019-08-07 15:47:24] This is port number 0
+	 device = COM7
+	 name = None
+	 description = Arduino Leonardo (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=6 LOCATION=1-2:x.0
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 6
+	 location = 1-2:x.0
+	 manufacturer = Arduino LLC (www.arduino.cc)
+	 product = None
+	 interface = None
+
+[2019-08-07 15:47:24] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+De volgende porten zijn gevonden ['COM7']
+[2019-08-07 15:47:30] This is port number 0
+	 device = COM7
+	 name = None
+	 description = Arduino Leonardo (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=6 LOCATION=1-2:x.0
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 6
+	 location = 1-2:x.0
+	 manufacturer = Arduino LLC (www.arduino.cc)
+	 product = None
+	 interface = None
+
+[2019-08-07 15:47:30] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+De volgende porten zijn gevonden ['COM7']
+[2019-08-07 15:47:35] This is port number 0
+	 device = COM7
+	 name = None
+	 description = Arduino Leonardo (COM7)
+	 hwid = USB VID:PID=2341:8036 SER=6 LOCATION=1-2:x.0
+	 vid = 9025
+	 pid = 32822
+	 serial_number = 6
+	 location = 1-2:x.0
+	 manufacturer = Arduino LLC (www.arduino.cc)
+	 product = None
+	 interface = None
+
+[2019-08-07 15:47:35] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
 De volgende porten zijn gevonden ['COM7']

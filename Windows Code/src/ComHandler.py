@@ -10,6 +10,8 @@ class ArduinoCommunication:
     def __init__(self, settings, debugging, changed_color, log):
         self.settings = settings
         self.debugging = debugging[0][0]
+        self.debugging_vid = debugging[0][1]
+        self.debugging_pid = debugging[0][2]
         self.changed_color = changed_color
         self.l = log
         self.start_counter_state = False  # keep track if the arduino is going through its setup correctly
@@ -43,8 +45,10 @@ class ArduinoCommunication:
         self.port_found = False
         ports = list(serial.tools.list_ports.comports())
         for num, p in enumerate(ports):
-            self.print_arduino_info(num, p)
-            if "Arduino" in p[1]:
+            if self.debugging:
+                self.print_arduino_info(num, p)
+            if ("Arduino" in p[1]) or (arduino_vid in p.vid) or (arduino_pid in p.pid) or \
+                    (p.vid == self.debugging[0][1]) or (p.pid == self.debugging[0][2]):
                 self.port.append(p[0])
                 self.port_found = True
         if self.port_found:
@@ -135,19 +139,19 @@ class ArduinoCommunication:
         sys.exit(0)
 
     def print_arduino_info(self, num, p):
-        print('This is port number {}'.format(num))
-        print('\t device = {}'.format(p.device))
-        print('\t name = {}'.format(p.name))
-        print('\t description = {}'.format(p.description))
-        print('\t hwid = {}'.format(p.hwid))
-        print('\t vid = {}'.format(p.vid))
-        print('\t pid = {}'.format(p.pid))
-        print('\t serial_number = {}'.format(p.serial_number))
-        print('\t location = {}'.format(p.location))
-        print('\t manufacturer = {}'.format(p.manufacturer))
-        print('\t product = {}'.format(p.product))
-        print('\t interface = {}'.format(p.interface))
-
+        temp = ('This is port number {}\n'.format(num))
+        temp += ('\t device = {}\n'.format(p.device))
+        temp += ('\t name = {}\n'.format(p.name))
+        temp += ('\t description = {}\n'.format(p.description))
+        temp += ('\t hwid = {}\n'.format(p.hwid))
+        temp += ('\t vid = {}\n'.format(p.vid))
+        temp += ('\t pid = {}\n'.format(p.pid))
+        temp += ('\t serial_number = {}\n'.format(p.serial_number))
+        temp += ('\t location = {}\n'.format(p.location))
+        temp += ('\t manufacturer = {}\n'.format(p.manufacturer))
+        temp += ('\t product = {}\n'.format(p.product))
+        temp += ('\t interface = {}\n'.format(p.interface))
+        self.l.logger(temp,self.debugging)
 
 
 

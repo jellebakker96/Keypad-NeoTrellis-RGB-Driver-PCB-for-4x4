@@ -1,2 +1,4 @@
 [debugging_knop]
 debugging = True
+vid = 10
+pid = 2
