@@ -42,8 +42,8 @@ class ArduinoCommunication:
         self.port.clear()
         self.port_found = False
         ports = list(serial.tools.list_ports.comports())
-        print(ports)
-        for p in ports:
+        for num, p in enumerate(ports):
+            print('port {}: {}\n'.format(num, p))
             if "Arduino" in p[1]:
                 self.port.append(p[0])
                 self.port_found = True
