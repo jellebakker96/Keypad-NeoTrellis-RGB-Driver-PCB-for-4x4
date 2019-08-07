@@ -43,7 +43,7 @@ class ArduinoCommunication:
         self.port_found = False
         ports = list(serial.tools.list_ports.comports())
         for num, p in enumerate(ports):
-            print('port {}: {}\n'.format(num, p.description))
+            self.print_arduino_info(num, p)
             if "Arduino" in p[1]:
                 self.port.append(p[0])
                 self.port_found = True
@@ -133,6 +133,22 @@ class ArduinoCommunication:
                       '\n4) Check of het toetsenbord kapot is door een ander toetsenbord te gebruiken')
         self.l.open_log()
         sys.exit(0)
+
+    def print_arduino_info(self, num, p):
+        print('This is port number {}'.format(num))
+        print('\t device = {}'.format(p.device))
+        print('\t name = {}'.format(p.name))
+        print('\t description = {}'.format(p.description))
+        print('\t hwid = {}'.format(p.hwid))
+        print('\t vid = {}'.format(p.vid))
+        print('\t pid = {}'.format(p.pid))
+        print('\t serial_number = {}'.format(p.serial_number))
+        print('\t location = {}'.format(p.location))
+        print('\t manufacturer = {}'.format(p.manufacturer))
+        print('\t product = {}'.format(p.product))
+        print('\t interface = {}'.format(p.interface))
+
+
 
 
 def close_port(a):  # normal shutdown

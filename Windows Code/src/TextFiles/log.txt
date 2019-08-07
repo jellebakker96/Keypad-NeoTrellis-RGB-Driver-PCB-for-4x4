@@ -1,9 +1,7 @@
 Deze text file is gemaakt door het programma "Keypad". Dit programma kan waarschijnlijk worden gevonden in de folder "C:\Program Files (x86)\Keypad"
 
-[2019-08-07 14:01:47] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+[2019-08-07 15:01:47] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
 De volgende porten zijn gevonden ['COM7']
-[2019-08-07 14:01:47] connected to COM7
-[2019-08-07 14:01:50] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
-De volgende porten zijn gevonden ['COM7']
-[2019-08-07 14:01:56] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
+[2019-08-07 15:01:47] connected to COM7
+[2019-08-07 15:01:51] Er zijn 1 arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die een open port heeft
 De volgende porten zijn gevonden ['COM7']
