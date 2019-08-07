@@ -45,14 +45,16 @@ class ArduinoCommunication:
         self.port_found = False
         ports = list(serial.tools.list_ports.comports())
         for num, p in enumerate(ports):
-            print('vid = {}, pid = {}'.format(p.vid, p.pid))
             if self.debugging:
                 self.print_arduino_info(num, p)
-            if ("Arduino" in p[1]) or (p.vid in arduino_vid) or (p.pid in arduino_pid) \
-                    or (p.vid == self.debugging_vid) or (p.pid == self.debugging_pid):
+            if ("Arduino" in p[1]) or ((p.vid in arduino_vid) and (p.pid in arduino_pid)):
                 self.port.append(p[0])
+                .
                 self.port_found = True
-                print('test 2')
+            elif self.debugging_vid or self.debugging_pid: # make sure that the vid/pid exist
+                if (p.vid == self.debugging_vid) and (p.pid == self.debugging_pid):
+                    self.port.append(p[0])
+                    self.port_found = True
         if self.port_found:
             self.l.logger(
                 'Er zijn {} arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die '
