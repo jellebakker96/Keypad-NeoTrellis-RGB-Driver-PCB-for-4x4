@@ -19,6 +19,8 @@ class ArduinoCommunication:
         self.port = []  # variable to store the port connected to an arduino
         self.port_old = []  # ald port variable to check if it has changed
         self.port_found = False  # Used to see if a port was found
+        self.port_changed = False # Used to see if a port has changed
+
         self.get_arduino_port()
         self.initialize_ser()
 
@@ -31,8 +33,6 @@ class ArduinoCommunication:
                     break
                 except serial.serialutil.SerialException:
                     self.l.logger('tried to connect to {} but attempted failed'.format(port), self.debugging)
-                    print(port)
-
                     if num >= len(self.port) - 1:
                         self.connection_error_detected('Het lijkt er op dat je dit progamma for de tweede keer probeerd'
                                                        ' te starten,\n Dit wordt niet ondersteunt.\n Het kan ook zijn'
@@ -45,16 +45,19 @@ class ArduinoCommunication:
         self.port_found = False
         ports = list(serial.tools.list_ports.comports())
         for num, p in enumerate(ports):
-            if self.debugging:
+            if self.debugging: # print the port info
                 self.print_arduino_info(num, p)
             if ("Arduino" in p[1]) or ((p.vid in arduino_vid) and (p.pid in arduino_pid)):
                 self.port.append(p[0])
-                .
                 self.port_found = True
+                if (self.port_old != self.port):
+                    self.port_changed = True
             elif self.debugging_vid or self.debugging_pid: # make sure that the vid/pid exist
                 if (p.vid == self.debugging_vid) and (p.pid == self.debugging_pid):
                     self.port.append(p[0])
                     self.port_found = True
+                    if (self.port_old != self.port):
+                        self.port_changed = True
         if self.port_found:
             self.l.logger(
                 'Er zijn {} arduinos gevonden. Er wordt verbinding gemaakt met de eerste arduino of de eene die '
@@ -62,8 +65,8 @@ class ArduinoCommunication:
                 self.debugging)
 
     def update_arduino_port(self):
-        if (self.port_old != self.port) and self.port_found:
-            print('test 3')
+        if self.port_changed and self.port_found:
+            self.port_changed = False
             if not self.port_old:  # this makes sure that you can fist start the program and then connect the keypad
                 self.initialize_ser()
             else:  # a new arduino has been connected, a connection will be made with the new arduino
@@ -119,7 +122,6 @@ class ArduinoCommunication:
             elif mes_clean[0] == 'done':
                 self.start_counter_state = False
                 self.start_ctr = 0
-                print('tests 2')
                 return False
 
             try:  # convert to integers to represent buttons
@@ -147,7 +149,7 @@ class ArduinoCommunication:
         sys.exit(0)
 
     def print_arduino_info(self, num, p):
-        temp = ('This is port number {}\n'.format(num))
+        temp = ('This is port {}\n'.format(num))
         temp += ('\t device = {}\n'.format(p.device))
         temp += ('\t name = {}\n'.format(p.name))
         temp += ('\t description = {}\n'.format(p.description))
@@ -185,8 +187,8 @@ def main():
 
     counter = 2
     while True:
+        a.get_arduino_port()  # get the port and update the port if one is found
         if counter >= update_settings_counter:
-            a.get_arduino_port()  # get the port and update the port if one is found
             a.update_arduino_port()  # update the found port
             a.update_color()  # update the keypad colors
             c.check_config_file()  # check the config file for correctness

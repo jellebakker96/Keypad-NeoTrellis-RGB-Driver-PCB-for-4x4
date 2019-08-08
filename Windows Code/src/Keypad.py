@@ -19,8 +19,8 @@ def main():
         buttons.append(Button(i, c.settings[i], l))  # initialize button objects
     counter = 2
     while True:
+        a.get_arduino_port()  # get the port and update the port if one is found
         if counter >= update_settings_counter:
-            a.get_arduino_port() # get the port and update the port if one is found
             a.update_arduino_port() # update the found port
             a.update_color() # update the keypad colors
             check_shutdown()

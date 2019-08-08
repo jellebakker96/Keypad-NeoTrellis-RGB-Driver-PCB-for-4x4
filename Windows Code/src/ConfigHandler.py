@@ -66,7 +66,7 @@ class ConfigFileHandler:
                     if item == 4:  # check if it the color option
                         self.settings[num][num2] = 0  # 0 is off
                     else:
-                        self.settings[num][num2] = 'NU'  # Not Used
+                        self.settings[num][num2] = None  # Not Used
                 elif self.config_items_data_type[num2] == 'boolean':
                     self.settings[num][num2] = self.check_boolean(self.config._sections[section][item])
                 elif self.config_items_data_type[num2] == 'path':

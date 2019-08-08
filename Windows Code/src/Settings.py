@@ -29,5 +29,5 @@ system_tray_closed = False
 # Arduino Communication
 baudrate = 115200
 wait_write = 0.0  # make sure the write buffer is empty (not really needed)
-arduino_vid = [9025] # serial devices with these vid/pid numbers will also be seen as a arduino
-arduino_pid = [32822] # serial devices with these vid/pid numbers will also be seen as a arduino
+arduino_vid = [9025] # serial devices with these vid numbers will also be seen as an arduino
+arduino_pid = [32822] # serial devices with these pid numbers will also be seen as an arduino
