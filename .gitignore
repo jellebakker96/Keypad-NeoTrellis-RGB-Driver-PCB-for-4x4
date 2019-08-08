@@ -109,3 +109,5 @@ venv.bak/
 
 # excel
 *.xlsx
+Windows Code/src/TextFiles/config.txt
+Windows Code/src/TextFiles/log.txt
