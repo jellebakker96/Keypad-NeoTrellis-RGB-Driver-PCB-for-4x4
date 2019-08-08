@@ -17,7 +17,7 @@ kleur 		= 255
 
 [knop_1]
 programma_knop 	= True
-progamma_pad 	= C:\Program Files\Mozilla Firefox\firefox.exe
+progamma_pad 	= C:\Program Files\Mozilla Firefox\firefo.exe
 open_progamma 	= False
 knop_functie 	=
 kleur		= 75
