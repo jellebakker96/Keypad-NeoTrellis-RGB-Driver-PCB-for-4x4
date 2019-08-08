@@ -138,6 +138,11 @@ class ArduinoCommunication:
             for i in range(16):
                 self.write_arduino(str(i).zfill(2) + str(self.settings[i][4]).zfill(3))
 
+    def turn_leds_off(self):
+        list_of_zeros = [0]*16
+        for i in range(16):
+            self.write_arduino(str(i).zfill(2) + str(list_of_zeros[i]).zfill(3))
+
     def connection_error_detected(self, inp):
         self.l.logger(inp)
         self.l.logger('\nHet programma wordt afgesloten.\nJe kunt 4 dingen doen.'
@@ -166,13 +171,9 @@ class ArduinoCommunication:
 
 
 def close_port(a):  # normal shutdown
+    a.turn_leds_off()
     a.ser.close()
-    print('port is closed 1')
-
-
-def close_port_interrupt(a, signal, frame):  # interrupt shutdown
-    a.ser.close()
-    print('port is closed 2')
+    a.l.logger('port is closed', a.debugging)
 
 
 def main():
@@ -183,7 +184,6 @@ def main():
                           config_debugging_items_data)  # debugging configuration
     a = ArduinoCommunication(c.settings, d.settings, c.changed_color, l)
     atexit.register(close_port, a)
-    signal.signal(signal.SIGINT, partial(close_port_interrupt, a))
 
     counter = 2
     while True:

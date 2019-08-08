@@ -20,15 +20,16 @@ def main():
     counter = 2
     while True:
         a.get_arduino_port()  # get the port and update the port if one is found
+        check_shutdown() # check if the program should shutdown
         if counter >= update_settings_counter:
             a.update_arduino_port() # update the found port
             a.update_color() # update the keypad colors
-            check_shutdown()
             c.check_config_file()  # check the config file for correctness
-            d.check_config_file()  # check the config file for correctness
+            d.check_config_file()  # check the debugging file for correctness
             c.update_settings()  # the config file is correct so update the settings
-            d.update_settings()  # the config file is correct so update the settings
+            d.update_settings()  # the debugging file is correct so update the settings
             counter = 0
+            print('test')
 
         message = a.read_arduino()
         if message:
