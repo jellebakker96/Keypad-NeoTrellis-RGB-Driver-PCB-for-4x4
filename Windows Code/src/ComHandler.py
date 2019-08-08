@@ -95,6 +95,8 @@ class ArduinoCommunication:
                 message = self.ser.read(100)  # read up to one hundred bytes or as much is in the buffer
             except serial.serialutil.SerialException:
                 return False
+            except AttributeError:
+                return False
             mes_dec = message.decode('utf-8')  # decode bytes
             mes_split = mes_dec.split('\n')  # split message
             try:  # needed for if you want to switch to an other usb port. The data becomes corrupted
@@ -146,10 +148,12 @@ class ArduinoCommunication:
     def connection_error_detected(self, inp):
         self.l.logger(inp)
         self.l.logger('\nHet programma wordt afgesloten.\nJe kunt 4 dingen doen.'
-                      '\n1) Installeer het programma opnieuw om een nieuwe config file te maken.'
-                      '\n2) Verbind de 9 toetsen eerst voordat je het programma start'
-                      '\n3) Zorg er voor dat maar 1 toetsenbord (die 9 knopen) is verbonden.'
-                      '\n4) Check of het toetsenbord kapot is door een ander toetsenbord te gebruiken')
+                      '\n\t1) Installeer het programma opnieuw om een nieuwe config file te maken.'
+                      '\n\t2) Verbind de 9 toetsen eerst voordat je het programma start'
+                      '\n\t3) Zorg er voor dat maar 1 toetsenbord (die 9 knopen) is verbonden.'
+                      '\n\t4) Check of het toetsenbord kapot is door een ander toetsenbord te gebruiken'
+                      '\n Als je klaar bent met de veranderingen moet je het programma in de system tray afsluiten'
+                      '\n vervolgens kun je het programma opnieuw opstarten.')
         self.l.open_log()
         sys.exit(0)
 

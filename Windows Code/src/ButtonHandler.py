@@ -12,62 +12,69 @@ class Button:
         self.keyboard = Controller()  # assign the controllor class for the keyboard simulator
 
     def open_app(self):
-        psutil.Popen(self.sub_settings[1])
+        if self.sub_settings[1]:
+            psutil.Popen(self.sub_settings[1])
 
     def close_app(self):
-        try:
-            for process in psutil.process_iter():
-                if process.name() == os.path.basename(self.sub_settings[1]):
-                    process.kill()
-        except psutil.NoSuchProcess:
-            print('nasty error')
+        if self.sub_settings[1]:
+            try:
+                for process in psutil.process_iter():
+                    if process.name() == os.path.basename(self.sub_settings[1]):
+                        process.kill()
+            except psutil.NoSuchProcess:
+                print('nasty error')
 
     def sim_key(self):
-        if self.sub_settings[3] == config_keypress_options[0]:
-            self.keyboard.press(Key.alt)
-            self.keyboard.release(Key.alt)
-        elif self.sub_settings[3] == config_keypress_options[1]:
-            self.keyboard.press(Key.backspace)
-            self.keyboard.release(Key.backspace)
-        elif self.sub_settings[3] == config_keypress_options[2]:
-            self.keyboard.press(Key.caps_lock)
-            self.keyboard.release(Key.caps_lock)
-        elif self.sub_settings[3] == config_keypress_options[3]:
-            self.keyboard.press(Key.cmd)
-            self.keyboard.release(Key.cmd)
-        elif self.sub_settings[3] == config_keypress_options[4]:
-            self.keyboard.press(Key.ctrl)
-            self.keyboard.release(Key.ctrl)
-        elif self.sub_settings[3] == config_keypress_options[5]:
-            self.keyboard.press(Key.delete)
-            self.keyboard.release(Key.delete)
-        elif self.sub_settings[3] == config_keypress_options[6]:
-            self.keyboard.press(Key.enter)
-            self.keyboard.release(Key.enter)
-        elif self.sub_settings[3] == config_keypress_options[7]:
-            self.keyboard.press(Key.esc)
-            self.keyboard.release(Key.esc)
-        elif self.sub_settings[3] == config_keypress_options[8]:
-            self.keyboard.press(Key.num_lock)
-            self.keyboard.release(Key.num_lock)
-        elif self.sub_settings[3] == config_keypress_options[9]:
-            self.keyboard.press(Key.pause)
-            self.keyboard.release(Key.pause)
-        elif self.sub_settings[3] == config_keypress_options[10]:
-            self.keyboard.press(Key.print_screen)
-            self.keyboard.release(Key.print_screen)
+        if self.sub_settings[3]:
+            if self.sub_settings[3] == config_keypress_options[0]:
+                self.keyboard.press(Key.alt)
+                self.keyboard.release(Key.alt)
+            elif self.sub_settings[3] == config_keypress_options[1]:
+                self.keyboard.press(Key.backspace)
+                self.keyboard.release(Key.backspace)
+            elif self.sub_settings[3] == config_keypress_options[2]:
+                self.keyboard.press(Key.caps_lock)
+                self.keyboard.release(Key.caps_lock)
+            elif self.sub_settings[3] == config_keypress_options[3]:
+                self.keyboard.press(Key.cmd)
+                self.keyboard.release(Key.cmd)
+            elif self.sub_settings[3] == config_keypress_options[4]:
+                self.keyboard.press(Key.ctrl)
+                self.keyboard.release(Key.ctrl)
+            elif self.sub_settings[3] == config_keypress_options[5]:
+                self.keyboard.press(Key.delete)
+                self.keyboard.release(Key.delete)
+            elif self.sub_settings[3] == config_keypress_options[6]:
+                self.keyboard.press(Key.enter)
+                self.keyboard.release(Key.enter)
+            elif self.sub_settings[3] == config_keypress_options[7]:
+                self.keyboard.press(Key.esc)
+                self.keyboard.release(Key.esc)
+            elif self.sub_settings[3] == config_keypress_options[8]:
+                self.keyboard.press(Key.num_lock)
+                self.keyboard.release(Key.num_lock)
+            elif self.sub_settings[3] == config_keypress_options[9]:
+                self.keyboard.press(Key.pause)
+                self.keyboard.release(Key.pause)
+            elif self.sub_settings[3] == config_keypress_options[10]:
+                self.keyboard.press(Key.print_screen)
+                self.keyboard.release(Key.print_screen)
 
     def update_settings(self, sub_settings):
         self.sub_settings = sub_settings
 
     def state_machine(self):
-        if self.sub_settings[0]:  # this button should open/close a program
-            if self.sub_settings[2]:  # this button should open a program
+        if self.sub_settings[0] == True:  # this button should open/close a program
+            if self.sub_settings[2] == True:  # this button should open a program
                 self.open_app()
-            else:  # this button should close a program
+            elif self.sub_settings[2] == False:  # this button should close a program
                 self.close_app()
-        else:  # this button should simulate a keypress of a keyboard
+            else:
+                return  # the config file is incorrect so do notting
+        elif self.sub_settings[0] == False:  # this button should simulate a keypress of a keyboard
             self.sim_key()
+        else:
+            return # the config file is incorrect so do notting
 
 
 def main():

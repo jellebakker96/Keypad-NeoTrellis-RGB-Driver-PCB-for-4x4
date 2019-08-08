@@ -29,8 +29,6 @@ def main():
             c.update_settings()  # the config file is correct so update the settings
             d.update_settings()  # the debugging file is correct so update the settings
             counter = 0
-            print('test')
-
         message = a.read_arduino()
         if message:
             for i in message:

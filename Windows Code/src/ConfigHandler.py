@@ -20,7 +20,7 @@ class ConfigFileHandler:
         # 'keypress string', 'int']
         self.temp = os.path.isfile(self.filename)  # check if there is a config file
         if self.temp == False:
-            self.config_error_detected('Er is geen config.txt file gevonden.')
+            self.config_error_detected('Er is geen config.txt file gevonden.', close_program = True)
         self.config = configparser.ConfigParser()  # create the configparser
         self.settings = [[0] * len(self.config_items) for i in range(len(self.config_sections))]  # create the settings
         # list that will be called by rest of the program
@@ -39,22 +39,21 @@ class ConfigFileHandler:
     def check_config_file(self):
         self.config.read(self.filename)  # read the config file
         self.configsections = self.config.sections()
-
-        if len(self.configsections) > len(self.config_sections):  # check if there are not to many option available
-            self.config_error_detected('Er zijn te veel secties. \nEr worden maximaal {} secties ondersteund'
+        if len(self.configsections) != len(self.config_sections):  # check if there are the correct amount of sections
+            self.config_error_detected('Er zijn te veel of the weinig secties. \nEr waren {} secties verwacht'
                                        ' een sectie is bijv. [knop_1] of [debugging_knop]'.format(
-                len(self.config_sections)))
+                len(self.config_sections)), close_program = True)
 
         for num, section in enumerate(self.configsections):
             if (self.config_sections[num] in self.configsections) == False:  # check if all sections are named correctly
                 self.config_error_detected('Een sectie naam is incorrect.\nDe secties moeten {} '
-                                           'heten.'.format(self.config_sections))
+                                           'heten.'.format(self.config_sections), close_program = True)
             for num2, item in enumerate(self.config_items):
                 try:
                     self.config._sections[section][item]  # check if each option can be found
                 except KeyError:
                     self.config_error_detected('Een optie naam is incorrect.\nDe opties moeten in de volgende '
-                                               'volgorde staan ' + str(self.config_items))
+                                               'volgorde staan ' + str(self.config_items), close_program = True)
 
     def update_settings(self):
         self.settings_old = copy.deepcopy(self.settings)
@@ -87,42 +86,47 @@ class ConfigFileHandler:
                      'NEE' or 'nee' or 'Incorrect' or 'INCORRECT' or 'incorrect' or 'Niet Correct' or
                      'Niet correct' or 'niet correct'):  # Check voor False
             return False
-        self.config_error_detected('Er is een boolean waarde incorrect gebruikt:\n{}\nJe moet True '
+        return self.config_error_detected('Er is een boolean waarde incorrect gebruikt:\n{}\nJe moet True '
                                    'of False gebruiken.'.format(inp))
 
     def check_path(self, inp):
         self.check_string(inp)
         if os.path.exists(inp):  # check if it is a correct path
             return inp
-        self.config_error_detected('Er is een incorrect programma pad gevonden:\n' + str(inp))
+        return self.config_error_detected('Er is een incorrect programma pad gevonden:\n' + str(inp))
 
     def check_key(self, inp):
         self.check_string(inp)
         if inp in config_keypress_options:
             return inp
-        self.config_error_detected('Er is een incorrecte optie ingevuld "' + str(inp) + '"\nDe mogelijke '
+        return self.config_error_detected('Er is een incorrecte optie ingevuld "' + str(inp) + '"\nDe mogelijke '
                                                                                         'opties zijn:\n{}'.format(
             config_keypress_options))
 
     def check_string(self, inp):
         if isinstance(inp, str):
             return inp
-        self.config_error_detected('Er is een vreemd symbol gevonden dat geen string is:\n{}'.format(inp))
+        return self.config_error_detected('Er is een vreemd symbol gevonden dat geen string is:\n{}'.format(inp))
 
     def check_int(self, inp):
         try:
             output = int(inp)
             return output
         except ValueError:
-            self.config_error_detected('De kleur hoort een nummer te zijn')
+            return self.config_error_detected('De kleur hoort een nummer te zijn')
 
-    def config_error_detected(self, inp):
-        self.l.logger(inp)
-        self.l.logger('Er is een error gevonden in de config file.\nJe kunt twee dingen doen.'
+    def config_error_detected(self, inp, close_program = False):
+        if self.changed_key or close_program:
+            self.l.logger(inp)
+            self.l.logger('Er is een error gevonden in de config file.\nJe kunt twee dingen doen.'
                       '\n\t1) Installeer het programma opnieuw om een nieuwe config file te maken.'
                       '\n\t2) Lees de documentatie om te zien hoe de config file er uit moet zien.')
-        if self.changed_key:
             self.l.open_log()
+        if close_program:
+            self.l.logger('Als je klaar bent met de veranderingen moet je het programma in de system tray afsluiten'
+                          '\n vervolgens kun je het programma opnieuw opstarten.')
+            sys.exit(0)
+        return None
 
     def check_config_change(self):
         self.changed_key.clear()
