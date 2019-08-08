@@ -118,11 +118,11 @@ class ConfigFileHandler:
 
     def config_error_detected(self, inp):
         self.l.logger(inp)
-        self.l.logger('\nHet programma wordt afgesloten.\nJe kunt twee dingen doen.'
-                      '\n1) Installeer het programma opnieuw om een nieuwe config file te maken.'
-                      '\n2) Lees de documentatie om te zien hoe de config file er uit moet zien.')
-        self.l.open_log()
-        sys.exit(0)
+        self.l.logger('Er is een error gevonden in de config file.\nJe kunt twee dingen doen.'
+                      '\n\t1) Installeer het programma opnieuw om een nieuwe config file te maken.'
+                      '\n\t2) Lees de documentatie om te zien hoe de config file er uit moet zien.')
+        if self.changed_key:
+            self.l.open_log()
 
     def check_config_change(self):
         self.changed_key.clear()
