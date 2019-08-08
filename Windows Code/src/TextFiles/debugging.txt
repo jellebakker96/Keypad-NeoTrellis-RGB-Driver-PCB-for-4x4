@@ -1,4 +1,4 @@
 [debugging_knop]
-debugging = True
+debugging = False
 vid = 9025
 pid = 32822
