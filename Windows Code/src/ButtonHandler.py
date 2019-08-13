@@ -74,7 +74,7 @@ class Button:
         elif self.sub_settings[0] == False:  # this button should simulate a keypress of a keyboard
             self.sim_key()
         else:
-            return # the config file is incorrect so do notting
+            return  # the config file is incorrect so do notting
 
 
 def main():
