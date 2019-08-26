@@ -1,7 +1,5 @@
 # Keypad-NeoTrellis-RGB-Driver-PCB-for-4x4
-This software offers a stand alone solution which allows the user to control the NeoTrellis RGB Driver PCB for 4x4 keypad using an arduino. The following directrories are pressent:
-
-The installation process is simple.
+This software offers a stand alone solution which allows the user to control the NeoTrellis RGB Driver PCB for 4x4 keypad using an arduino. The installation process is simple.
 
 1) Download \Keypad-V2\Windows Code\MakeSetup\dist\Keypad_setup.exe
 
