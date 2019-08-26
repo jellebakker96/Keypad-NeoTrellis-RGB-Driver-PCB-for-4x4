@@ -1,5 +1,2 @@
 Deze text file is gemaakt door het programma "Keypad". Dit programma kan waarschijnlijk worden gevonden in de folder "C:\Program Files (x86)\Keypad"
 
-[2019-08-12 13:38:31] Hello world
-[2019-08-12 13:38:31] Hello world2
-[2019-08-12 13:38:31] Hello world4

@@ -73,6 +73,7 @@ class ArduinoCommunication:
         # Iterate through each port.
         for num, p in enumerate(ports):
             # Print the port info.
+            self.print_arduino_info(num, p)
             if self.debugging:
                 self.print_arduino_info(num, p)
             # Check if 'Arduino' occurs in the description or if the vid and pid codes are in the default arduino list
@@ -239,7 +240,6 @@ class ArduinoCommunication:
         temp += ('\t product = {}\n'.format(p.product))
         temp += ('\t interface = {}\n'.format(p.interface))
         self.l.logger(temp, self.debugging)
-
 
 def close_port(a):
     """Normal shutdown"""

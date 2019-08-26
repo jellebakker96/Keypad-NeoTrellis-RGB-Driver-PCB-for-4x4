@@ -62,10 +62,10 @@ def setup_system_tray():
     # This text is seen when the mouse hovers over the tray icon.
     hover_text = "Keypad"
     # These meanu options are available for the system tray.
-    menu_options = (('Documentatie', 'documentation.ico', show_documentation),
+    menu_options = (('Documentation', 'documentation.ico', show_documentation),
                     ('Settings', 'settings.ico', show_config_keypress_file),
                     ('Log', 'log.ico', show_log),
-                    ('debugging', "debugging.ico", show_config_debugging_file)
+                    ('Debugging', "debugging.ico", show_config_debugging_file)
                     )
     # Setup the system tray.
     systrayicon = SysTrayIcon("ggzvs.ico", hover_text, menu_options, on_quit=close_program, default_menu_index=1)

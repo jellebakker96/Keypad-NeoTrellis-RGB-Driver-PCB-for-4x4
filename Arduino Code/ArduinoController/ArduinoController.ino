@@ -1,7 +1,4 @@
-/* This example shows basic usage of the NeoTrellis.
-  The buttons will light up various colors when pressed.
-  The interrupt pin is not used in this example.
-*/
+/* This code is used to cominucate with the PC and the NeoTrellis keypad*/
 
 #include "Adafruit_NeoTrellis.h"
 #include "stdio.h"
