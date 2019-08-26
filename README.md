@@ -21,11 +21,11 @@ The following folders can be found in this git repository:
 
 1) Arduino Code - The arduino programmes used for testing and controlling the arduino.
   
- 1) ArduinoController - This is the final program to control the arduino.
+    1) ArduinoController - This is the final program to control the arduino.
 
- 2) KeyPadCheck - Used to check if the NeoTrellis driver PCB is working.
+    2) KeyPadCheck - Used to check if the NeoTrellis driver PCB is working.
 
- 3) PingPong - Used to check if the serial communications are working by first reading from the serial port and then writing the read message.
+    3) PingPong - Used to check if the serial communications are working by first reading from the serial port and then writing the read message.
 
 
 2) Documentation - Contains the Python and arduino libraries, the used programs and all other documentation.
