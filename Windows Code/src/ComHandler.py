@@ -7,7 +7,7 @@ import signal
 
 
 class ArduinoCommunication:
-    def __init__(self, settings, debugging, changed_color, log):
+    def __init__(self, settings, debugging, leds_on, changed_color, log):
         """This class handles the communications with the Arduino."""
 
         # Assign the settings.
@@ -17,6 +17,8 @@ class ArduinoCommunication:
         # Manual ID of the Aruidno.
         self.debugging_vid = debugging[0][1]
         self.debugging_pid = debugging[0][2]
+        # Should the leds be on or off the first time you start the program
+        self.leds_on = leds_on
         # Changed color variable.
         self.changed_color = changed_color
         # Assign log object.
@@ -29,6 +31,7 @@ class ArduinoCommunication:
         self.port = []
         # Old port variable to check if it has changed.
         self.port_old = []
+        self.port_old2 = []
         # Used to see if a port was found.
         self.port_found = False
         # Used to see if a port has changed.
@@ -37,6 +40,8 @@ class ArduinoCommunication:
         self.get_arduino_port()
         # Initialize serial communication
         self.initialize_ser()
+        # Initialize the apply_settings variable
+        self.apply_settings = False
 
     def initialize_ser(self):
         """Initialize serial communications with the Aruidno"""
@@ -63,7 +68,9 @@ class ArduinoCommunication:
         """Get all USB ports connected to an Arduino."""
 
         # Save the current Arduino ports.
+        self.port_old2 = copy.deepcopy(self.port_old)
         self.port_old = copy.deepcopy(self.port)
+        print(self.port_old)
         # Clear the port list.
         self.port.clear()
         # Reset the port_found variable
@@ -108,7 +115,10 @@ class ArduinoCommunication:
         if self.port_changed and self.port_found:
             # The port get updated so reset the "self.port_changed" variable.
             self.port_changed = False
+            # This variable is used to update the collors
+            self.apply_settings = True
             # This makes sure that you can first start the program and then connect the keypad.
+            print(self.port_old)
             if not self.port_old:
                 self.initialize_ser()
             # A new Arduino has been connected, a connection will be made with the new Arduino.
@@ -116,6 +126,9 @@ class ArduinoCommunication:
                 for port in self.port:
                     if port in self.port:
                         self.ser.port = port
+
+    def update_apply_settings(self):
+        self.apply_settings = False
 
     def write_arduino(self, inp):
         """Write to the Arduino."""
@@ -199,12 +212,20 @@ class ArduinoCommunication:
     def update_color(self):
         """Update the colors"""
 
+        if self.leds_on[0]:
+            self.turn_leds_on()
+        else:
+            self.turn_leds_off()
+
+    def turn_leds_on(self):
+        """Turn the leds on."""
+
         if self.port_found:
             for i in range(16):
                 self.write_arduino(str(i).zfill(2) + str(self.settings[i][4]).zfill(3))
 
     def turn_leds_off(self):
-        """Turn the leds of."""
+        """Turn the leds off."""
 
         list_of_zeros = [0] * 16
         for i in range(16):

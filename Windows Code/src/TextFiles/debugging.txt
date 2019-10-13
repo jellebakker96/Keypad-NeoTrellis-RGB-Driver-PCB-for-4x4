@@ -2,3 +2,4 @@
 debugging = False
 vid = 9025
 pid = 32822
+leds_on = True

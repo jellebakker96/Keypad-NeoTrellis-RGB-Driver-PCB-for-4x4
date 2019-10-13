@@ -13,6 +13,17 @@ def check_shutdown():
     if system_tray_closed:
         sys.exit(0)
 
+def check_apply_settings():
+    """Check the state of the apply_settings variable."""
+
+    global apply_settings
+    return apply_settings
+
+def update_apply_settings():
+    """Update the state of the apply_settings variable."""
+
+    global apply_settings
+    apply_settings = False
 
 def open_file(input1):
     """Open files."""
@@ -55,6 +66,13 @@ def close_program(systrayicon):
     global system_tray_closed
     system_tray_closed = True
 
+def apply_settings_fun(systrayicon):
+    """Create the flag in the system tray tread that is used to see if the system should update the settings and
+    collors."""
+
+    # Declare global variable.
+    global apply_settings
+    apply_settings = True
 
 def setup_system_tray():
     """This function initializes the system tray tread."""
@@ -64,6 +82,7 @@ def setup_system_tray():
     # These meanu options are available for the system tray.
     menu_options = (('Documentation', 'documentation.ico', show_documentation),
                     ('Settings', 'settings.ico', show_config_keypress_file),
+                    ('Apply Settings', 'applysettings.ico', apply_settings_fun),
                     ('Log', 'log.ico', show_log),
                     ('Debugging', "debugging.ico", show_config_debugging_file)
                     )

@@ -5,11 +5,13 @@ import os
 
 
 class Button:
-    def __init__(self, but_num, sub_settings, log):
+    def __init__(self, but_num, sub_settings, leds_on, log):
         self.sub_settings = sub_settings  # give the first button a number (used to open the program)
+        self.leds_on = leds_on # Get the debugging settings
         self.but_num = but_num  # give a ID to the button
         self.l = log  # assign logger class
         self.keyboard = Controller()  # assign the controllor class for the keyboard simulator
+        self.apply_settings = False
 
     def open_app(self):
         if self.sub_settings[1]:
@@ -59,6 +61,18 @@ class Button:
             elif self.sub_settings[3] == config_keypress_options[10]:
                 self.keyboard.press(Key.print_screen)
                 self.keyboard.release(Key.print_screen)
+            elif self.sub_settings[3] == config_keypress_options[11]:
+                # Toggle keypad leds
+                self.leds_on[0] = not self.leds_on[0]
+                self.apply_settings = True
+            elif self.sub_settings[3] == config_keypress_options[12]:
+                self.keyboard.press(Key.cmd)
+                self.keyboard.press(Key.tab)
+                self.keyboard.release(Key.tab)
+                self.keyboard.release(Key.cmd)
+
+    def update_apply_settings(self):
+        self.apply_settings = False
 
     def update_settings(self, sub_settings):
         self.sub_settings = sub_settings

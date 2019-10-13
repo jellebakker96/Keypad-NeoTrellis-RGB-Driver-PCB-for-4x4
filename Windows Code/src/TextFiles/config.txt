@@ -20,21 +20,21 @@ programma_knop 	= True
 progamma_pad 	= C:\Program Files\Mozilla Firefox\firefox.exe
 open_progamma 	= False
 knop_functie 	=
-kleur		= 0
+kleur		= 75
 
 [knop_2]
-programma_knop 	= True
-progamma_pad 	= C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+programma_knop 	= False
+progamma_pad 	=        
 open_progamma 	= True
-knop_functie 	=
-kleur		= 255
+knop_functie 	= esc
+kleur		= 180
 
 [knop_3]
-programma_knop 	= True
-progamma_pad 	= C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
-open_progamma 	= False
-knop_functie 	=
-kleur		= 75
+programma_knop 	= False
+progamma_pad 	=
+open_progamma 	= True
+knop_functie 	= esc
+kleur		= 180
 
 [knop_4]
 programma_knop 	= True
@@ -51,74 +51,74 @@ knop_functie 	=
 kleur		= 75
 
 [knop_6]
+programma_knop 	= False
+progamma_pad 	=
+open_progamma 	= True
+knop_functie 	= cmd
+kleur		= 110
+
+[knop_7]
+programma_knop 	= False
+progamma_pad 	=
+open_progamma 	= True
+knop_functie 	= cmd
+kleur		= 110
+
+[knop_8]
 programma_knop 	= True
 progamma_pad 	= C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
 open_progamma 	= True
 knop_functie 	=
 kleur		= 255
 
-[knop_7]
+[knop_9]
 programma_knop 	= True
 progamma_pad 	= C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
 open_progamma 	= False
 knop_functie 	=
 kleur		= 75
 
-[knop_8]
-programma_knop 	= False
-progamma_pad 	=        
-open_progamma 	= True
-knop_functie 	= cmd 
-kleur		= 180
-
-[knop_9]
-programma_knop 	= False
-progamma_pad 	=
-open_progamma 	= True
-knop_functie 	= esc
-kleur		= 210
-
 [knop_10]
 programma_knop 	= False
 progamma_pad 	=
 open_progamma 	= True
-knop_functie 	= backspace
-kleur		= 150
+knop_functie 	= cmd_tab
+kleur		= 50
 
 [knop_11]
 programma_knop 	= False
 progamma_pad 	=
 open_progamma 	= True
-knop_functie 	= delete
-kleur		= 130
+knop_functie 	= cmd_tab
+kleur		= 50
 
 [knop_12]
-programma_knop 	= False
-progamma_pad 	=
+programma_knop 	= True
+progamma_pad 	= C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
 open_progamma 	= True
-knop_functie 	= pause
-kleur		= 110
+knop_functie 	=
+kleur		= 255
 
 [knop_13]
-programma_knop 	= False
-progamma_pad 	=
-open_progamma 	= True
-knop_functie 	= print_screen
-kleur		= 90
+programma_knop 	= True
+progamma_pad 	= C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+open_progamma 	= False
+knop_functie 	=
+kleur		= 75
 
 [knop_14]
 programma_knop 	= False
 progamma_pad 	=
 open_progamma 	= True
-knop_functie 	= caps_lock
-kleur		= 50
+knop_functie 	= leds
+kleur		= 145
 
 [knop_15]
 programma_knop 	= False
 progamma_pad 	=
 open_progamma 	= True
-knop_functie 	= enter
-kleur		= 30
+knop_functie 	= leds
+kleur		= 145
 
 
 

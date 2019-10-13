@@ -2,14 +2,16 @@
 
 #include "Adafruit_NeoTrellis.h"
 #include "stdio.h"
-#define TIME_OUT 30 // 60 per second so 180 = 3s
+#define TIME_OUT 100 // 60 per second so 180 = 3s
 #define BAUD_RATE 115200 // default is 9600
+#define KEY_TIME_OUT_CNT 100// counter for how long the leds should be off when they are pressed
 Adafruit_NeoTrellis trellis;
 
 bool key_rising_edge = false;
 bool key_rising_edge_old = false;
 bool time_out_ctr_state = false;
 int time_out_ctr = (TIME_OUT + 1);
+bool key_released[16];
 int key_number = 16;
 int key_number_old = 16;
 int num = 16;
@@ -20,6 +22,8 @@ const int c = 4;
 char buf_num[n];
 char buf_color[c];
 int colors[17];
+int key_released_cnt[16];
+
 
 //define a callback for key presses
 TrellisCallback blink(keyEvent evt) {
@@ -32,9 +36,9 @@ TrellisCallback blink(keyEvent evt) {
     // or is the pad released?
     key_rising_edge = true;
     key_number = evt.bit.NUM;
-    set_color(key_number); //on falling
-
+    key_released[key_number] = true;
   }
+  
   // Turn on/off the neopixels!
   trellis.pixels.show();
 
@@ -43,6 +47,12 @@ TrellisCallback blink(keyEvent evt) {
 }
 
 void setup() {
+  for(int i = 0; i < NEO_TRELLIS_NUM_KEYS; i++){
+    key_released[i]=false;
+    key_released_cnt[i]=0;
+  }  
+
+  // Start serial communications
   Serial.begin(BAUD_RATE);
   while (!Serial);
 
@@ -104,10 +114,25 @@ void loop() {
     // The correct colors are saved in the array colors
     colors[num] = color;
     // Set the new color
-    set_color(num);
+    if(((key_released[num] == true) and (key_released_cnt[num]>= KEY_TIME_OUT_CNT)) or (key_released[num] == false)){
+       set_color(num);
+    }
     // Turn on/off the neopixels!
     trellis.pixels.show();
   }
+
+    for(int i = 0; i < NEO_TRELLIS_NUM_KEYS; i++){
+    if(key_released[i] == true and key_released_cnt[i]< KEY_TIME_OUT_CNT){
+      key_released_cnt[i]++;
+    }
+    else if(key_released[i] == true and key_released_cnt[i]>= KEY_TIME_OUT_CNT){ 
+      key_released[i]=false;
+      key_released_cnt[i] = 0;
+      set_color(i); 
+      // Turn on/off the neopixels!
+      trellis.pixels.show();
+    }
+  }  
   delay(20); //the trellis has a resolution of around 60hz
 }
 

@@ -6,7 +6,7 @@ Filename_documentation = 'Keypad_Documentatie.pdf'
 
 # Config
 config_keypress_options = ['alt', 'backspace', 'caps_lock', 'cmd', 'ctrl', 'delete', 'enter', 'esc', 'num_lock',
-                           'pause', 'print_screen']
+                           'pause', 'print_screen', 'leds', 'cmd_tab']
 
 # Config file key options
 config_key_sections_check = ['knop_0', 'knop_1', 'knop_2', 'knop_3', 'knop_4', 'knop_5', 'knop_6', 'knop_7', 'knop_8',
@@ -18,15 +18,20 @@ config_key_items_data = [key_items_data] * len(config_key_sections_check)
 
 # Config file debugging
 config_debugging_sections_check = ['debugging_knop']
-config_debugging_items_check = [['debugging', 'vid', 'pid']]
-config_debugging_items_data = [['boolean', 'int', 'int']]
+config_debugging_items_check = [['debugging', 'vid', 'pid', 'leds_on']]
+config_debugging_items_data = [['boolean', 'int', 'int', 'boolean']]
 
 # Timing
 sleep_time = 0.25  # total time that the program sleeps in seconds
 update_settings_counter = 16  # the settings are updated every sleep_time*update_settings_counter seconds
 
 # System Tray
+global system_tray_closed
 system_tray_closed = False
+
+# Update settings
+global apply_settings
+apply_settings = True
 
 # Arduino Communication
 baudrate = 115200
