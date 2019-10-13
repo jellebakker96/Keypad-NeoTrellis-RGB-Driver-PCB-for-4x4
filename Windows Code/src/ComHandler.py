@@ -31,7 +31,6 @@ class ArduinoCommunication:
         self.port = []
         # Old port variable to check if it has changed.
         self.port_old = []
-        self.port_old2 = []
         # Used to see if a port was found.
         self.port_found = False
         # Used to see if a port has changed.
@@ -68,8 +67,8 @@ class ArduinoCommunication:
         """Get all USB ports connected to an Arduino."""
 
         # Save the current Arduino ports.
-        self.port_old2 = copy.deepcopy(self.port_old)
         self.port_old = copy.deepcopy(self.port)
+        print("Get_arduino_port")
         print(self.port_old)
         # Clear the port list.
         self.port.clear()
@@ -118,7 +117,6 @@ class ArduinoCommunication:
             # This variable is used to update the collors
             self.apply_settings = True
             # This makes sure that you can first start the program and then connect the keypad.
-            print(self.port_old)
             if not self.port_old:
                 self.initialize_ser()
             # A new Arduino has been connected, a connection will be made with the new Arduino.

@@ -31,11 +31,11 @@ def main():
     counter = 2
     while True:
         # Get the port and update the port if one is found.
-        a.get_arduino_port()
         # Check if the program should shutdown.
         check_shutdown()
         if counter >= update_settings_counter:
             # Update the found port.
+            a.get_arduino_port()
             a.update_arduino_port()
             # Check if the settings should be updated:
             # There are 3 times this should be done
