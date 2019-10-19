@@ -21,7 +21,9 @@ class Button:
         if self.sub_settings[1]:
             try:
                 for process in psutil.process_iter():
-                    if process.name() == os.path.basename(self.sub_settings[1]):
+                    temp1 = os.path.splitext(process.name())[0]
+                    temp2 = os.path.splitext(os.path.basename(self.sub_settings[1]))[0]
+                    if temp1 == temp2:
                         process.kill()
             except psutil.NoSuchProcess:
                 print('nasty error')

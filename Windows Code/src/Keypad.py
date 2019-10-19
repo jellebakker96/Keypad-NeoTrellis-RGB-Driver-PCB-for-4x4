@@ -69,7 +69,7 @@ def main():
         # Open/close/simulate keypress depending on the settings.
         if message:
             for i in message:
-                print(i)
+                # print(i)
                 buttons[i].state_machine()
         # Increment counter.
         counter = counter + 1

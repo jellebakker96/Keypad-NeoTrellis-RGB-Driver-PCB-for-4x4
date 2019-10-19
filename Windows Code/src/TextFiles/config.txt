@@ -3,12 +3,12 @@
 programma_knop 	= True
 
 #Hier moet je het programma pad geven als je deze knop gebruikt om een programma te openen.								
-progamma_pad 	= C:\Program Files\Mozilla Firefox\firefox.exe
+progamma_pad 	= C:\Program Files\WindowsApps\Microsoft.PlumbagoaMicrosoftGarageProject_2.10.61020.0_x86__8wekyb3d8bbwe\Plumbago.exe
 
 #Open of sluit je gekozen programma, als "open_progamma = False" dan zal de knop je programma sluiten. 
 open_progamma 	= True
 
-#Hier moet je de functie opgeven die je wilt uitvoeren, een lijst met opties kun je in de documentatie en onder aan dit bestand finden.								
+#Hier moet je de functie opgeven die je wilt uitvoeren, een lijst met opties kun je in de documentatie finden.								
 knop_functie 	=
 
 #Hier moet een nummer tussen 0 en 255 die de kleur van de knop bepaald. De kleur map is gegeven in de documentatie.								
@@ -17,7 +17,7 @@ kleur 		= 255
 
 [knop_1]
 programma_knop 	= True
-progamma_pad 	= C:\Program Files\Mozilla Firefox\firefox.exe
+progamma_pad 	= C:\Program Files\WindowsApps\Microsoft.PlumbagoaMicrosoftGarageProject_2.10.61020.0_x86__8wekyb3d8bbwe\Plumbago.exe
 open_progamma 	= False
 knop_functie 	=
 kleur		= 75
@@ -26,26 +26,26 @@ kleur		= 75
 programma_knop 	= False
 progamma_pad 	=        
 open_progamma 	= True
-knop_functie 	= esc
+knop_functie 	= cmd_tab
 kleur		= 180
 
 [knop_3]
 programma_knop 	= False
 progamma_pad 	=
 open_progamma 	= True
-knop_functie 	= esc
+knop_functie 	= cmd_tab
 kleur		= 180
 
 [knop_4]
 programma_knop 	= True
-progamma_pad 	= C:\WINDOWS\system32\notepad.exe
+progamma_pad 	= C:\Program Files\Microsoft Office\Office16\POWERPNT.exe
 open_progamma 	= True
 knop_functie 	=
 kleur		= 255
 
 [knop_5]
 programma_knop 	= True
-progamma_pad 	= C:\WINDOWS\system32\notepad.exe
+progamma_pad 	= C:\Program Files\Microsoft Office\Office16\POWERPNT.exe
 open_progamma 	= False
 knop_functie 	=
 kleur		= 75
@@ -82,26 +82,26 @@ kleur		= 75
 programma_knop 	= False
 progamma_pad 	=
 open_progamma 	= True
-knop_functie 	= cmd_tab
+knop_functie 	= esc
 kleur		= 50
 
 [knop_11]
 programma_knop 	= False
 progamma_pad 	=
 open_progamma 	= True
-knop_functie 	= cmd_tab
+knop_functie 	= esc
 kleur		= 50
 
 [knop_12]
 programma_knop 	= True
-progamma_pad 	= C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+progamma_pad 	= C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe
 open_progamma 	= True
 knop_functie 	=
 kleur		= 255
 
 [knop_13]
 programma_knop 	= True
-progamma_pad 	= C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+progamma_pad 	= C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe
 open_progamma 	= False
 knop_functie 	=
 kleur		= 75

@@ -68,8 +68,6 @@ class ArduinoCommunication:
 
         # Save the current Arduino ports.
         self.port_old = copy.deepcopy(self.port)
-        print("Get_arduino_port")
-        print(self.port_old)
         # Clear the port list.
         self.port.clear()
         # Reset the port_found variable
