@@ -14,7 +14,9 @@ class Button:
         self.apply_settings = False
 
     def open_app(self):
-        if self.sub_settings[1]:
+        if os.path.splitext(os.path.basename(self.sub_settings[1]))[1] == '.lnk':
+            os.startfile(self.sub_settings[1])
+        elif self.sub_settings[1]:
             psutil.Popen(self.sub_settings[1])
 
     def close_app(self):

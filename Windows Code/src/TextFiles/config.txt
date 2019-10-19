@@ -3,7 +3,7 @@
 programma_knop 	= True
 
 #Hier moet je het programma pad geven als je deze knop gebruikt om een programma te openen.								
-progamma_pad 	= C:\Program Files\WindowsApps\Microsoft.PlumbagoaMicrosoftGarageProject_2.10.61020.0_x86__8wekyb3d8bbwe\Plumbago.exe
+progamma_pad 	= C:\Users\admin\Desktop\Plumbago.lnk
 
 #Open of sluit je gekozen programma, als "open_progamma = False" dan zal de knop je programma sluiten. 
 open_progamma 	= True
@@ -17,7 +17,7 @@ kleur 		= 255
 
 [knop_1]
 programma_knop 	= True
-progamma_pad 	= C:\Program Files\WindowsApps\Microsoft.PlumbagoaMicrosoftGarageProject_2.10.61020.0_x86__8wekyb3d8bbwe\Plumbago.exe
+progamma_pad 	= C:\Users\admin\Desktop\Plumbago.lnk
 open_progamma 	= False
 knop_functie 	=
 kleur		= 75
